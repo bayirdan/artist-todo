@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- LOGIN PAGE -->
+      <section class="login-page">
+        <h2 class="header-2">Username</h2>
+        <input type="text" class="input" />
+        <a href="username" class="btn btn-white header-2">Continue</a>
+      </section>
+      <!-- LOGIN PAGE -->
+      <!-- MAIN PAGE -->
+      <section class="main-page">
+        <h1 class="header-1">To do</h1>
+        <div class="main">
+          <div class="page-left">
+            <div class="task-box">
+              <div class="date">
+                <img src="./src/images/calendar.svg" alt="calendar" />
+                <h2 class="header-2">Tuesday, March 12</h2>
+              </div>
+              <div class="table">
+                <ul>
+                  <li class="item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="isDone" id="" />
+                    </div>
+                    <div class="task text">Task</div>
+                    <div class="icon">
+                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
+                    </div>
+                    <div id="js-delete" class="icon">
+                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="isDone" id="" />
+                    </div>
+                    <div class="task text">Task</div>
+                    <div class="icon">
+                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
+                    </div>
+                    <div id="js-delete" class="icon">
+                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="isDone" id="" />
+                    </div>
+                    <div class="task text">Task</div>
+                    <div class="icon">
+                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
+                    </div>
+                    <div id="js-delete" class="icon">
+                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-right">
+            <button class="btn btn-white header-2">Add New Task</button>
+          </div>
+        </div>
+        <div class="add-task-box">
+          <div class="add-task">
+            <div class="task-title">
+              <span class="header-2">Title</span>
+              <input class="input" type="text" />
+            </div>
+            <div class="task-date">
+              <span class="header-2">Date</span>
+              <input class="input" type="date" name="" id="" />
+            </div>
+            <div class="task-buttons">
+              <button class="btn btn-grey header-2">Cancel</button>
+              <button class="btn btn-grey header-2">Save</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MAIN PAGE -->
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
