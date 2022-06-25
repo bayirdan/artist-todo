@@ -21,7 +21,7 @@ let user;
 // ---------------------------------------------
 loginButton.addEventListener("click", () => {
   if (!usernameData.value) {
-    return alert("Add a username");
+    return alert("Kullanıcı adı giriniz!");
   }
   let url = window.location + usernameData.value;
   window.history.pushState({}, "", url);

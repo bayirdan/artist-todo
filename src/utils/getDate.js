@@ -1,6 +1,6 @@
 export const getDate = (date) => {
   const errorMessage =
-    "Lütfen tarihi geçerli zamanlarda ve gösterildiği şekilde giriniz";
+    "Lütfen gösterildiği şekilde ve geçerli bir tarih giriniz";
 
   let dateFormat = date.split("/");
   if (dateFormat.length !== 3) {
