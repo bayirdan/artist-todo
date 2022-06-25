@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -10,81 +10,48 @@
   <body>
     <div id="app">
       <!-- LOGIN PAGE -->
-      <section class="login-page">
+      <section id="js-login-page" class="login-page invis">
         <h2 class="header-2">Username</h2>
-        <input type="text" class="input" />
-        <a href="username" class="btn btn-white header-2">Continue</a>
+        <input id="js-username-data" type="text" class="input" />
+        <button id="js-login" class="btn btn-white header-2">Continue</button>
       </section>
       <!-- LOGIN PAGE -->
       <!-- MAIN PAGE -->
-      <section class="main-page">
-        <h1 class="header-1">To do</h1>
+      <section id="js-main-page" class="main-page">
+        <h1 id="js-todo-title" class="header-1">To do</h1>
         <div class="main">
           <div class="page-left">
-            <div class="task-box">
-              <div class="date">
-                <img src="./src/images/calendar.svg" alt="calendar" />
-                <h2 class="header-2">Tuesday, March 12</h2>
-              </div>
-              <div class="table">
-                <ul>
-                  <li class="item">
-                    <div class="checkbox">
-                      <input type="checkbox" name="isDone" id="" />
-                    </div>
-                    <div class="task text">Task</div>
-                    <div class="icon">
-                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
-                    </div>
-                    <div id="js-delete" class="icon">
-                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="checkbox">
-                      <input type="checkbox" name="isDone" id="" />
-                    </div>
-                    <div class="task text">Task</div>
-                    <div class="icon">
-                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
-                    </div>
-                    <div id="js-delete" class="icon">
-                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="checkbox">
-                      <input type="checkbox" name="isDone" id="" />
-                    </div>
-                    <div class="task text">Task</div>
-                    <div class="icon">
-                      <img src="./src/images/edit.svg" alt="edit" srcset="" />
-                    </div>
-                    <div id="js-delete" class="icon">
-                      <img src="./src/images/delete.svg" alt="edit" srcset="" />
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <div id="js-tasks" class="tasks-box">
+              <div id="js-task-box" class="task-box"></div>
             </div>
           </div>
           <div class="page-right">
-            <button class="btn btn-white header-2">Add New Task</button>
+            <button id="js-new-task-btn" class="btn btn-white header-2">
+              Add New Task
+            </button>
           </div>
         </div>
-        <div class="add-task-box">
+        <div id="js-add-task-box" class="add-task-box">
           <div class="add-task">
             <div class="task-title">
               <span class="header-2">Title</span>
-              <input class="input" type="text" />
+              <input id="js-text" class="input" type="text" />
             </div>
             <div class="task-date">
               <span class="header-2">Date</span>
-              <input class="input" type="date" name="" id="" />
+              <input
+                class="input"
+                type="text"
+                name="date"
+                id="js-date"
+                placeholder="dd/mm/yyyy"
+              />
             </div>
             <div class="task-buttons">
-              <button class="btn btn-grey header-2">Cancel</button>
-              <button class="btn btn-grey header-2">Save</button>
+              <button id="js-cancel" class="btn btn-grey header-2">
+                Cancel
+              </button>
+              <button id="js-save" class="btn btn-grey header-2">Save</button>
             </div>
           </div>
         </div>

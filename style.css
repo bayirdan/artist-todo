@@ -113,20 +113,19 @@ input[type="checkbox"] {
   border: 1px solid var(--color-black);
 }
 
-input[type="date"] {
-  width: 159px;
-  size: 24px;
-}
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
 input[type="checkbox"]:checked {
   background-image: url(./src/images/check.svg);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+input[name="date"] {
+  width: 149px;
+  size: 24px;
+}
+
+input[name="date"]::placeholder {
+  color: var(--color-black);
 }
 
 /* LOGİN PAGE */
@@ -138,14 +137,13 @@ section.login-page {
   gap: 20px;
   align-items: center;
   justify-content: center;
-  display: none;
 }
 
 section.login-page input {
   width: 400px;
 }
 
-section.login-page a {
+section.login-page button {
   width: 256px;
   margin-top: 44px;
 }
@@ -166,10 +164,11 @@ section.main-page .main {
   grid-template-columns: 1fr 1fr;
 }
 
-section.main-page .main .page-left .task-box .date {
+section.main-page .main .page-left .task-box .date .date-title {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 0 5px;
 }
 
 section.main-page .main .page-left .task-box .table {
@@ -190,11 +189,28 @@ section.main-page .main .page-left .task-box .table ul li > * {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
+}
+
+section.main-page .main .page-left .task-box .table ul li input.task {
+  box-shadow: inset -4px -4px 16px rgba(39, 39, 39, 0.15),
+    inset 4px 4px 16px rgba(39, 39, 39, 0.15);
 }
 
 section.main-page .main .page-left .task-box .table ul li .task {
   width: 100%;
+  outline: none;
+}
+
+section.main-page .main .page-left .task-box .table ul li input.task:disabled {
+  color: var(--color-black);
+  opacity: 1;
+  background-color: var(--color-white);
+  box-shadow: none;
+}
+
+section.main-page .main .page-left .task-box .table ul li input.task-done {
+  color: var(--color-grey) !important;
 }
 
 section.main-page .main .page-left .task-box .table ul li .checkbox {
@@ -232,10 +248,9 @@ section.main-page .add-task-box {
   width: 100vw;
   height: 100vh;
   background-color: var(--color-grey-50);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  display: none;
 }
 
 section.main-page .add-task-box .add-task {
@@ -261,6 +276,7 @@ section.main-page .add-task-box .add-task .task-buttons {
 section.main-page .add-task-box .add-task .task-buttons button {
   color: var(--color-white);
   background-color: var(--color-grey-50);
+  margin: 0 24px;
 }
 /* ADD TASK BOX */
 
@@ -296,4 +312,12 @@ section.main-page .add-task-box .add-task .task-buttons button {
   section.main-page .add-task-box .add-task .task-title input {
     width: 300px;
   }
+}
+
+section.login-page.invis {
+  display: none;
+}
+
+section.main-page.invis {
+  display: none;
 }
